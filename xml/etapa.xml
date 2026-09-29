@@ -4,7 +4,7 @@
 
     <nombre>Vall d'Alba a Aramón Valdelinares</nombre>
     <numero>7</numero>
-    <longitud unidad="km">148.8</longitud>
+    <longitud unidad="km">149.8</longitud>
     <fecha>2026-08-28</fecha>
     <tiempoGanador>03:49:47</tiempoGanador>
     <velocidadMedia unidad="km/h">39.1</velocidadMedia>
@@ -46,9 +46,9 @@
         </salida>
         <meta>
             <coordenadas>
-                <longitudGeo unidad="grados">-0.800</longitudGeo>
-                <latitudGeo unidad="grados">40.317</latitudGeo>
-                <altitud unidad="m">1839</altitud>
+                <longitudGeo unidad="grados">-0.610507</longitudGeo>
+                <latitudGeo unidad="grados">40.393721</latitudGeo>
+                <altitud unidad="m">1963</altitud>
             </coordenadas>
         </meta>
     </ubicaciones>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://www.uniovi.es"
+           targetNamespace="http://www.uniovi.es"
+           elementFormDefault="qualified">
+
+  <!-- ================= TIPOS SIMPLES (rangos y restricciones) ================= -->
+  <xs:simpleType name="stTexto">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="100"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stNumeroEtapa">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="1"/>
+      <xs:maxInclusive value="21"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stLongitudKm">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+      <xs:maxInclusive value="300"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stVelocidad">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="15"/>
+      <xs:maxInclusive value="70"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stDesnivel">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="10000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stLongitudGeo">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="-180"/>
+      <xs:maxInclusive value="180"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stLatitudGeo">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="-90"/>
+      <xs:maxInclusive value="90"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stAltitud">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="-100"/>
+      <xs:maxInclusive value="4000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stDistancia">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="300"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stTipoEtapa">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="llana"/>
+      <xs:enumeration value="montana"/>
+      <xs:enumeration value="contrarreloj_individual"/>
+      <xs:enumeration value="contrarreloj_equipos"/>
+      <xs:enumeration value="media_montana"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stCategoria">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="primera"/>
+      <xs:enumeration value="segunda"/>
+      <xs:enumeration value="tercera"/>
+      <xs:enumeration value="especial"/>
+      <xs:enumeration value="bonificado"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stTipoSprint">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="intermedio"/>
+      <xs:enumeration value="bonificado"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stDiferencia">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\+\d{2}:[0-5]\d:[0-5]\d"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stFoto">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\S+\.(jpg|jpeg|png)"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stVideo">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\S+\.(mp4|avi|mov|webm)"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="stAudio">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\S+\.(mp3|wav|ogg)"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- ================= TIPOS COMPLEJOS CON ATRIBUTO unidad ================= -->
+  <xs:complexType name="ctLongitud">
+    <xs:simpleContent>
+      <xs:extension base="stLongitudKm">
+        <xs:attribute name="unidad" type="xs:string" fixed="km"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ctVelocidad">
+    <xs:simpleContent>
+      <xs:extension base="stVelocidad">
+        <xs:attribute name="unidad" type="xs:string" fixed="km/h"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ctDesnivel">
+    <xs:simpleContent>
+      <xs:extension base="stDesnivel">
+        <xs:attribute name="unidad" type="xs:string" fixed="m"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ctLongitudGeo">
+    <xs:simpleContent>
+      <xs:extension base="stLongitudGeo">
+        <xs:attribute name="unidad" type="xs:string" fixed="grados"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ctLatitudGeo">
+    <xs:simpleContent>
+      <xs:extension base="stLatitudGeo">
+        <xs:attribute name="unidad" type="xs:string" fixed="grados"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ctAltitud">
+    <xs:simpleContent>
+      <xs:extension base="stAltitud">
+        <xs:attribute name="unidad" type="xs:string" fixed="m"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ctDistancia">
+    <xs:simpleContent>
+      <xs:extension base="stDistancia">
+        <xs:attribute name="unidad" type="xs:string" fixed="km"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- ================= OTROS TIPOS COMPLEJOS ================= -->
+  <xs:complexType name="ctTipo">
+    <xs:attribute name="valor" type="stTipoEtapa" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ctReferencia">
+    <xs:simpleContent>
+      <xs:extension base="stTexto">
+        <xs:attribute name="url" type="xs:anyURI"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ctFoto">
+    <xs:simpleContent>
+      <xs:extension base="stFoto">
+        <xs:attribute name="descripcion" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ctVideo">
+    <xs:simpleContent>
+      <xs:extension base="stVideo">
+        <xs:attribute name="descripcion" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ctAudio">
+    <xs:simpleContent>
+      <xs:extension base="stAudio">
+        <xs:attribute name="descripcion" type="xs:string"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="ctCoordenadas">
+    <xs:sequence>
+      <xs:element name="longitudGeo" type="ctLongitudGeo"/>
+      <xs:element name="latitudGeo" type="ctLatitudGeo"/>
+      <xs:element name="altitud" type="ctAltitud"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ctLugar">
+    <xs:sequence>
+      <xs:element name="coordenadas" type="ctCoordenadas"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ctPuerto">
+    <xs:sequence>
+      <xs:element name="nombre" type="stTexto"/>
+      <xs:element name="coordenadas" type="ctCoordenadas"/>
+      <xs:element name="distanciaSalida" type="ctDistancia"/>
+    </xs:sequence>
+    <xs:attribute name="categoria" type="stCategoria" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ctSprint">
+    <xs:sequence>
+      <xs:element name="nombre" type="stTexto"/>
+      <xs:element name="coordenadas" type="ctCoordenadas"/>
+      <xs:element name="distanciaSalida" type="ctDistancia"/>
+    </xs:sequence>
+    <xs:attribute name="tipo" type="stTipoSprint" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="ctPunto">
+    <xs:sequence>
+      <xs:element name="coordenadas" type="ctCoordenadas"/>
+      <xs:element name="distanciaSalida" type="ctDistancia"/>
+    </xs:sequence>
+    <xs:attribute name="nombre" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="ctPrimero">
+    <xs:sequence>
+      <xs:element name="nombre" type="stTexto"/>
+      <xs:element name="equipo" type="stTexto" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ctConDiferencia">
+    <xs:sequence>
+      <xs:element name="nombre" type="stTexto"/>
+      <xs:element name="equipo" type="stTexto" minOccurs="0"/>
+      <xs:element name="diferencia" type="stDiferencia"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ctClasificacion">
+    <xs:sequence>
+      <xs:element name="primero" type="ctPrimero"/>
+      <xs:element name="segundo" type="ctConDiferencia"/>
+      <xs:element name="tercero" type="ctConDiferencia"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- ================= ELEMENTO RAÍZ ================= -->
+  <xs:element name="etapa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="stTexto"/>
+        <xs:element name="numero" type="stNumeroEtapa"/>
+        <xs:element name="longitud" type="ctLongitud"/>
+        <xs:element name="fecha" type="xs:date"/>
+        <xs:element name="tiempoGanador" type="xs:time"/>
+        <xs:element name="velocidadMedia" type="ctVelocidad"/>
+        <xs:element name="desnivel" type="ctDesnivel"/>
+        <xs:element name="origen" type="stTexto"/>
+        <xs:element name="destino" type="stTexto"/>
+        <xs:element name="tipo" type="ctTipo"/>
+
+        <xs:element name="referencias">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="referencia" type="ctReferencia" minOccurs="3" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="multimedia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fotos">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="foto" type="ctFoto" minOccurs="1" maxOccurs="5"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="videos">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="video" type="ctVideo" minOccurs="1" maxOccurs="3"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="audios">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="audio" type="ctAudio" minOccurs="1" maxOccurs="3"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="ubicaciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="salida" type="ctLugar"/>
+              <xs:element name="meta" type="ctLugar"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="hitos">
+          <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="puerto" type="ctPuerto"/>
+              <xs:element name="sprint" type="ctSprint"/>
+            </xs:choice>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="puntosAnonimos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="punto" type="ctPunto" minOccurs="20" maxOccurs="30"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="clasificaciones">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="clasificacionEtapa" type="ctClasificacion"/>
+              <xs:element name="clasificacionGeneral" type="ctClasificacion"/>
+              <xs:element name="clasificacionEquipos" type="ctClasificacion"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

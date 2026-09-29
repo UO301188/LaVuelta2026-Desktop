@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='utf-8'?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <Style id="estiloRojo">
+      <IconStyle>
+        <color>ff0000ff</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="estiloVerde">
+      <IconStyle>
+        <color>ff00ff00</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="estiloAzul">
+      <IconStyle>
+        <color>ffff0000</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Style id="estiloAmarillo">
+      <IconStyle>
+        <color>ff00ffff</color>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+        </Icon>
+      </IconStyle>
+    </Style>
+    <Placemark>
+      <name>Ruta Vall d'Alba a Aramón Valdelinares</name>
+      <Style>
+        <LineStyle>
+          <color>ff0000ff</color>
+          <width>4</width>
+        </LineStyle>
+      </Style>
+      <LineString>
+        <extrude>0</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.0344063,40.1730083,185
+-0.052975,40.119481,260
+-0.063881,40.166043,250
+-0.097707,40.164019,240
+-0.140573,40.154024,250
+-0.168,40.158619,375
+-0.183789,40.143662,470
+-0.175936,40.136580,470
+-0.171696,40.129006,400
+-0.172628,40.120220,460
+-0.179283,40.116739,475
+-0.191463,40.121266,475
+-0.207265,40.113616,350
+-0.236257,40.117191,360
+-0.271714,40.125833,450
+-0.280533,40.136626,546
+-0.316129,40.143362,800
+-0.379667,40.130367,800
+-0.351258,40.142170,988
+-0.3925,40.1453,800
+-0.493710,40.115620,900
+-0.524291,40.068804,466
+-0.591631,40.103766,629
+-0.625348,40.135696,970
+-0.6142,40.1569,1000
+-0.651697,40.190832,938
+-0.754337,40.250869,1036
+-0.747974,40.258187,1025
+-0.709794,40.343956,1558
+-0.691794,40.416373,1720
+-0.610507,40.393721,1963
+-0.610507,40.393721,1963</coordinates>
+      </LineString>
+    </Placemark>
+    <Placemark>
+      <name>Puerto El Remolcador</name>
+      <description>Puerto de categoría segunda - km 52.2</description>
+      <styleUrl>#estiloVerde</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.351258,40.142170,988</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Alto de Zucaina</name>
+      <description>Puerto de categoría tercera - km 66.8</description>
+      <styleUrl>#estiloVerde</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.3925,40.1453,800</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Puerto Fuente de Rubielos</name>
+      <description>Puerto de categoría tercera - km 104.9</description>
+      <styleUrl>#estiloVerde</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.6142,40.1569,1000</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Puerto de San Rafael</name>
+      <description>Puerto de categoría segunda - km 136.3</description>
+      <styleUrl>#estiloVerde</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.709794,40.343956,1558</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Alto de Valdelinares (Aramón Valdelinares)</name>
+      <description>Puerto de categoría primera - km 149.8</description>
+      <styleUrl>#estiloVerde</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.610507,40.393721,1963</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Sprint de Mora de Rubielos</name>
+      <description>Sprint bonificado - km 123.3</description>
+      <styleUrl>#estiloAzul</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.747974,40.258187,1025</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Vilafamés</name>
+      <description>Punto anónimo - km 5.3</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.052975,40.119481,260</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>La Barona</name>
+      <description>Punto anónimo - km 12.0</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.063881,40.166043,250</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 15.0</name>
+      <description>Punto anónimo - km 15.0</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.097707,40.164019,240</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 19.0</name>
+      <description>Punto anónimo - km 19.0</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.140573,40.154024,250</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Les Useres</name>
+      <description>Punto anónimo - km 20.0</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.168,40.158619,375</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 25.0</name>
+      <description>Punto anónimo - km 25.0</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.183789,40.143662,470</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 27.0</name>
+      <description>Punto anónimo - km 27.0</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.175936,40.136580,470</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mas d'Avall</name>
+      <description>Punto anónimo - km 28.5</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.171696,40.129006,400</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Costur</name>
+      <description>Punto anónimo - km 28.5</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.172628,40.120220,460</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 30.7</name>
+      <description>Punto anónimo - km 30.7</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.179283,40.116739,475</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 32.0</name>
+      <description>Punto anónimo - km 32.0</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.191463,40.121266,475</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 34.3</name>
+      <description>Punto anónimo - km 34.3</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.207265,40.113616,350</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Figueroles</name>
+      <description>Punto anónimo - km 36.3</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.236257,40.117191,360</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 41.3</name>
+      <description>Punto anónimo - km 41.3</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.271714,40.125833,450</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Lucena del Cid</name>
+      <description>Punto anónimo - km 42.3</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.280533,40.136626,546</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 48.5</name>
+      <description>Punto anónimo - km 48.5</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.316129,40.143362,800</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Castillo de Villamalefa</name>
+      <description>Punto anónimo - km 51.6</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.379667,40.130367,800</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 70.0</name>
+      <description>Punto anónimo - km 70.0</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.493710,40.115620,900</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Montanejos</name>
+      <description>Punto anónimo - km 83.4</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.524291,40.068804,466</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Puebla de Arenoso</name>
+      <description>Punto anónimo - km 93.8</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.591631,40.103766,629</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Olba</name>
+      <description>Punto anónimo - km 95.4</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.625348,40.135696,970</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Rubielos de Mora</name>
+      <description>Punto anónimo - km 109.9</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.651697,40.190832,938</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mora de Rubielos</name>
+      <description>Punto anónimo - km 122.0</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.754337,40.250869,1036</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Punto km 144.0</name>
+      <description>Punto anónimo - km 144.0</description>
+      <styleUrl>#estiloAmarillo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.691794,40.416373,1720</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Salida: Vall d'Alba</name>
+      <description>Punto de salida de la etapa</description>
+      <styleUrl>#estiloRojo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.0344063,40.1730083,185</coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Meta: Aramón Valdelinares</name>
+      <description>Punto de meta de la etapa</description>
+      <styleUrl>#estiloRojo</styleUrl>
+      <Point>
+        <altitudeMode>clampToGround</altitudeMode>
+        <coordinates>-0.610507,40.393721,1963</coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>

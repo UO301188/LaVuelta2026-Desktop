@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<etapa xmlns="http://www.uniovi.es"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.uniovi.es etapa.xsd">
+
+    <nombre>Vall d'Alba a Aramón Valdelinares</nombre>
+    <numero>7</numero>
+    <longitud unidad="km">149.8</longitud>
+    <fecha>2026-08-28</fecha>
+    <tiempoGanador>03:49:47</tiempoGanador>
+    <velocidadMedia unidad="km/h">39.1</velocidadMedia>
+    <desnivel unidad="m">3685</desnivel>
+    <origen>Vall d'Alba</origen>
+    <destino>Aramón Valdelinares</destino>
+    <tipo valor="montana"/>
+
+    <referencias>
+        <referencia url="https://www.lavuelta.es/es/clasificaciones/etapa-7">Clasificaciones oficiales de la etapa 7 - lavuelta.es</referencia>
+        <referencia url="https://www.lavuelta.es/en/stage-7">Página oficial de La Vuelta - Perfil de la etapa 7</referencia>
+        <referencia url="https://en.wikipedia.org/wiki/2026_Vuelta_a_Espa%C3%B1a">Wikipedia - 2026 Vuelta a España</referencia>
+        <referencia url="https://ciclismointernacional.com/vuelta-a-espana-cronica-2026-etapa-7/">Crónica de la etapa 7</referencia>
+        <referencia url="https://es.wikipedia.org/wiki/Valdelinares">Wikipedia - Valdelinares (Teruel)</referencia>
+    </referencias>
+
+    <multimedia>
+        <fotos>
+            <foto descripcion="Salida de la etapa en Vall d'Alba">salida.jpg</foto>
+            <foto descripcion="Ataque final de Leknessund en Valdelinares">ataque_leknessund.jpg</foto>
+            <foto descripcion="Llegada a meta en la estación de esquí de Aramón Valdelinares">meta.jpg</foto>
+        </fotos>
+        <videos>
+            <video descripcion="Resumen oficial de la etapa 7">resumen_etapa7.mp4</video>
+            <video descripcion="Entrevista con los ciclistas después de la etapa 7">entrevista_etapa7.mp4</video>
+        </videos>
+        <audios>
+            <audio descripcion="Podcast previo a la etapa de montaña por el Maestrazgo">podcast_etapa7.mp3</audio>
+        </audios>
+    </multimedia>
+
+    <ubicaciones>
+        <salida>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.0344063</longitudGeo>
+                <latitudGeo unidad="grados">40.1730083</latitudGeo>
+                <altitud unidad="m">185</altitud>
+            </coordenadas>
+        </salida>
+        <meta>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.610507</longitudGeo>
+                <latitudGeo unidad="grados">40.393721</latitudGeo>
+                <altitud unidad="m">1963</altitud>
+            </coordenadas>
+        </meta>
+    </ubicaciones>
+
+    <hitos>
+        <puerto categoria="segunda">
+            <nombre>Puerto El Remolcador</nombre>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.351258</longitudGeo>
+                <latitudGeo unidad="grados">40.142170</latitudGeo>
+                <altitud unidad="m">988</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">52.2</distanciaSalida>
+        </puerto>
+        <puerto categoria="tercera">
+            <nombre>Alto de Zucaina</nombre>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.3925</longitudGeo>
+                <latitudGeo unidad="grados">40.1453</latitudGeo>
+                <altitud unidad="m">800</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">66.8</distanciaSalida>
+        </puerto>
+        <puerto categoria="tercera">
+            <nombre>Puerto Fuente de Rubielos</nombre>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.6142</longitudGeo>
+                <latitudGeo unidad="grados">40.1569</latitudGeo>
+                <altitud unidad="m">1000</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">104.9</distanciaSalida>
+        </puerto>
+        <sprint tipo="bonificado">
+            <nombre>Sprint de Mora de Rubielos</nombre>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.747974</longitudGeo>
+                <latitudGeo unidad="grados">40.258187</latitudGeo>
+                <altitud unidad="m">1025</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">123.3</distanciaSalida>
+        </sprint>
+        <puerto categoria="segunda">
+            <nombre>Puerto de San Rafael</nombre>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.709794</longitudGeo>
+                <latitudGeo unidad="grados">40.343956</latitudGeo>
+                <altitud unidad="m">1558</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">136.3</distanciaSalida>
+        </puerto>
+        <puerto categoria="primera">
+            <nombre>Alto de Valdelinares (Aramón Valdelinares)</nombre>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.610507</longitudGeo>
+                <latitudGeo unidad="grados">40.393721</latitudGeo>
+                <altitud unidad="m">1963</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">149.8</distanciaSalida>
+        </puerto>
+    </hitos>
+
+    <puntosAnonimos>
+        <punto nombre="Vilafamés">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.052975</longitudGeo>
+                <latitudGeo unidad="grados">40.119481</latitudGeo>
+                <altitud unidad="m">260</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">5.3</distanciaSalida>
+        </punto>
+
+        <punto nombre="La Barona">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.063881</longitudGeo>
+                <latitudGeo unidad="grados">40.166043</latitudGeo>
+                <altitud unidad="m">250</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">12</distanciaSalida>
+        </punto>
+
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.097707</longitudGeo>
+                <latitudGeo unidad="grados">40.164019</latitudGeo>
+                <altitud unidad="m">240</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">15</distanciaSalida>
+        </punto>
+
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.140573</longitudGeo>
+                <latitudGeo unidad="grados">40.154024</latitudGeo>
+                <altitud unidad="m">250</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">19</distanciaSalida>
+        </punto>
+
+        <punto nombre="Les Useres">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.168</longitudGeo>
+                <latitudGeo unidad="grados">40.158619</latitudGeo>
+                <altitud unidad="m">375</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">20</distanciaSalida>
+        </punto>
+
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.183789</longitudGeo>
+                <latitudGeo unidad="grados">40.143662</latitudGeo>
+                <altitud unidad="m">470</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">25</distanciaSalida>
+        </punto>
+
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.175936</longitudGeo>
+                <latitudGeo unidad="grados">40.136580</latitudGeo>
+                <altitud unidad="m">470</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">27</distanciaSalida>
+        </punto>
+
+        <punto nombre ="Mas d'Avall">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.171696</longitudGeo>
+                <latitudGeo unidad="grados">40.129006</latitudGeo>
+                <altitud unidad="m">400</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">28.5</distanciaSalida>
+        </punto>
+
+        <punto nombre ="Costur">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.172628</longitudGeo>
+                <latitudGeo unidad="grados">40.120220</latitudGeo>
+                <altitud unidad="m">460</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">28.5</distanciaSalida>
+        </punto>
+
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.179283</longitudGeo>
+                <latitudGeo unidad="grados">40.116739</latitudGeo>
+                <altitud unidad="m">475</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">30.7</distanciaSalida>
+        </punto>
+
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.191463</longitudGeo>
+                <latitudGeo unidad="grados">40.121266</latitudGeo>
+                <altitud unidad="m">475</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">32</distanciaSalida>
+        </punto>
+
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.207265</longitudGeo>
+                <latitudGeo unidad="grados">40.113616</latitudGeo>
+                <altitud unidad="m">350</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">34.3</distanciaSalida>
+        </punto>
+
+        <punto nombre="Figueroles">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.236257</longitudGeo>
+                <latitudGeo unidad="grados">40.117191</latitudGeo>
+                <altitud unidad="m">360</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">36.3</distanciaSalida>
+        </punto>
+
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.271714</longitudGeo>
+                <latitudGeo unidad="grados">40.125833</latitudGeo>
+                <altitud unidad="m">450</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">41.3</distanciaSalida>
+        </punto>
+
+        <punto nombre="Lucena del Cid">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.280533</longitudGeo>
+                <latitudGeo unidad="grados">40.136626</latitudGeo>
+                <altitud unidad="m">546</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">42.3</distanciaSalida>
+        </punto>
+
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.316129</longitudGeo>
+                <latitudGeo unidad="grados">40.143362</latitudGeo>
+                <altitud unidad="m">800</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">48.5</distanciaSalida>
+        </punto>
+
+        <punto nombre = "Castillo de Villamalefa">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.379667</longitudGeo>
+                <latitudGeo unidad="grados">40.130367</latitudGeo>
+                <altitud unidad="m">800</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">51.6</distanciaSalida>
+        </punto>
+
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.493710</longitudGeo>
+                <latitudGeo unidad="grados">40.115620</latitudGeo>
+                <altitud unidad="m">900</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">70</distanciaSalida>
+        </punto>
+        
+        <punto nombre="Montanejos">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.524291</longitudGeo>
+                <latitudGeo unidad="grados">40.068804</latitudGeo>
+                <altitud unidad="m">466</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">83.4</distanciaSalida>
+        </punto>
+
+        <punto nombre="Puebla de Arenoso">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.591631</longitudGeo>
+                <latitudGeo unidad="grados">40.103766</latitudGeo>
+                <altitud unidad="m">629</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">93.8</distanciaSalida>
+        </punto>
+
+        <punto nombre="Olba">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.625348</longitudGeo>
+                <latitudGeo unidad="grados">40.135696</latitudGeo>
+                <altitud unidad="m">970</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">95.4</distanciaSalida>
+        </punto>
+
+        <punto nombre="Rubielos de Mora">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.651697</longitudGeo>
+                <latitudGeo unidad="grados">40.190832</latitudGeo>
+                <altitud unidad="m">938</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">109.9</distanciaSalida>
+        </punto>
+        <punto nombre="Mora de Rubielos">
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.754337</longitudGeo>
+                <latitudGeo unidad="grados">40.250869</latitudGeo>
+                <altitud unidad="m">1036</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">122</distanciaSalida>
+        </punto>
+        <punto>
+            <coordenadas>
+                <longitudGeo unidad="grados">-0.691794</longitudGeo>
+                <latitudGeo unidad="grados">40.416373</latitudGeo>
+                <altitud unidad="m">1720</altitud>
+            </coordenadas>
+            <distanciaSalida unidad="km">144</distanciaSalida>
+        </punto>
+    </puntosAnonimos>
+
+    <clasificaciones>
+        <clasificacionEtapa>
+            <primero>
+                <nombre>Andreas Leknessund</nombre>
+                <equipo>Uno-X Mobility</equipo>
+            </primero>
+            <segundo>
+                <nombre>Tobias Halland Johannessen</nombre>
+                <equipo>Uno-X Mobility</equipo>
+                <diferencia>+00:00:34</diferencia>
+            </segundo>
+            <tercero>
+                <nombre>Wout van Aert</nombre>
+                <equipo>Team Visma | Lease a Bike</equipo>
+                <diferencia>+00:00:47</diferencia>
+            </tercero>
+        </clasificacionEtapa>
+
+        <clasificacionGeneral>
+            <primero>
+                <nombre>Tadej Pogačar</nombre>
+                <equipo>UAE Team Emirates XRG</equipo>
+            </primero>
+            <segundo>
+                <nombre>Enric Mas</nombre>
+                <equipo>Movistar Team</equipo>
+                <diferencia>+00:03:50</diferencia>
+            </segundo>
+            <tercero>
+                <nombre>Primož Roglič</nombre>
+                <equipo>Red Bull - BORA - Hansgrohe</equipo>
+                <diferencia>+00:04:50</diferencia>
+            </tercero>
+        </clasificacionGeneral>
+
+        <clasificacionEquipos>
+            <primero>
+                <nombre>Decathlon CMA CGM</nombre>
+            </primero>
+            <segundo>
+                <nombre>UAE Team Emirates - XRG</nombre>
+                <diferencia>+00:12:04</diferencia>
+            </segundo>
+            <tercero>
+                <nombre>Team Visma | Lease a Bike</nombre>
+                <diferencia>+00:20:35</diferencia>
+            </tercero>
+        </clasificacionEquipos>
+
+    </clasificaciones>
+
+</etapa>

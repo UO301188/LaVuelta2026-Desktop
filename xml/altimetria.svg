@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect x="0" y="0" width="1200" height="700" fill="white" stroke-width="0" stroke="white" />
+  <text x="80" y="25" font-family="Verdana" font-size="18" style="font-weight:bold; fill:black">Vall d'Alba a Aramón Valdelinares</text>
+  <text x="25" y="610.0" font-family="Verdana" font-size="12" style="fill:#555" transform="rotate(-90 25 610.0)">Altitud (m)</text>
+  <line x1="80" y1="620.0" x2="1160" y2="620.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="624.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">0</text>
+  <line x1="80" y1="592.0" x2="1160" y2="592.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="596.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">200</text>
+  <line x1="80" y1="564.0" x2="1160" y2="564.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="568.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">400</text>
+  <line x1="80" y1="536.0" x2="1160" y2="536.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="540.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">600</text>
+  <line x1="80" y1="508.0" x2="1160" y2="508.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="512.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">800</text>
+  <line x1="80" y1="480.0" x2="1160" y2="480.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="484.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">1000</text>
+  <line x1="80" y1="452.0" x2="1160" y2="452.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="456.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">1200</text>
+  <line x1="80" y1="424.0" x2="1160" y2="424.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="428.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">1400</text>
+  <line x1="80" y1="396.0" x2="1160" y2="396.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="400.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">1600</text>
+  <line x1="80" y1="368.0" x2="1160" y2="368.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="372.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">1800</text>
+  <line x1="80" y1="340.0" x2="1160" y2="340.0" stroke="lightgray" stroke-width="1" />
+  <text x="72" y="344.0" font-family="Verdana" font-size="11" style="text-anchor:end; fill:#555">2000</text>
+  <line x1="80.0" y1="620" x2="80.0" y2="626" stroke="black" stroke-width="1" />
+  <text x="80.0" y="642" font-family="Verdana" font-size="11" style="text-anchor:middle; fill:#333">0</text>
+  <line x1="224.2" y1="620" x2="224.2" y2="626" stroke="black" stroke-width="1" />
+  <text x="224.2" y="642" font-family="Verdana" font-size="11" style="text-anchor:middle; fill:#333">20</text>
+  <line x1="368.4" y1="620" x2="368.4" y2="626" stroke="black" stroke-width="1" />
+  <text x="368.4" y="642" font-family="Verdana" font-size="11" style="text-anchor:middle; fill:#333">40</text>
+  <line x1="512.6" y1="620" x2="512.6" y2="626" stroke="black" stroke-width="1" />
+  <text x="512.6" y="642" font-family="Verdana" font-size="11" style="text-anchor:middle; fill:#333">60</text>
+  <line x1="656.8" y1="620" x2="656.8" y2="626" stroke="black" stroke-width="1" />
+  <text x="656.8" y="642" font-family="Verdana" font-size="11" style="text-anchor:middle; fill:#333">80</text>
+  <line x1="801.0" y1="620" x2="801.0" y2="626" stroke="black" stroke-width="1" />
+  <text x="801.0" y="642" font-family="Verdana" font-size="11" style="text-anchor:middle; fill:#333">100</text>
+  <line x1="945.2" y1="620" x2="945.2" y2="626" stroke="black" stroke-width="1" />
+  <text x="945.2" y="642" font-family="Verdana" font-size="11" style="text-anchor:middle; fill:#333">120</text>
+  <line x1="1089.3" y1="620" x2="1089.3" y2="626" stroke="black" stroke-width="1" />
+  <text x="1089.3" y="642" font-family="Verdana" font-size="11" style="text-anchor:middle; fill:#333">140</text>
+  <text x="1165" y="642" font-family="Verdana" font-size="11" style="fill:#333">km</text>
+  <polyline points="80.0,620.0 80.0,594.1 118.2,583.6 166.5,585.0 188.1,586.4 217.0,585.0 224.2,567.5 260.2,554.2 274.7,554.2 285.5,564.0 285.5,555.6 301.3,553.5 310.7,553.5 327.3,571.0 341.7,569.6 377.8,557.0 385.0,543.6 429.7,508.0 452.0,508.0 456.3,481.7 561.6,508.0 584.7,494.0 681.3,554.8 756.3,531.9 767.8,484.2 836.3,480.0 872.3,488.7 959.6,475.0 968.9,476.5 1062.7,401.9 1118.2,379.2 1160.0,345.2 1160.0,345.2 1160.0,620.0" stroke="#7a1a10" stroke-width="1.5" fill="#e8412c" />
+  <line x1="80.0" y1="330" x2="80.0" y2="594.1" stroke="gray" stroke-width="1" />
+  <circle cx="80.0" cy="594.1" r="4" fill="red" />
+  <text x="84.0" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 84.0 325)">Vall d'Alba / 185 m</text>
+  <line x1="118.2" y1="330" x2="118.2" y2="583.6" stroke="gray" stroke-width="1" />
+  <circle cx="118.2" cy="583.6" r="4" fill="gold" />
+  <text x="122.2" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 122.2 325)">Vilafamés / 260 m</text>
+  <line x1="166.5" y1="330" x2="166.5" y2="585.0" stroke="gray" stroke-width="1" />
+  <circle cx="166.5" cy="585.0" r="4" fill="gold" />
+  <text x="170.5" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 170.5 325)">La Barona / 250 m</text>
+  <line x1="224.2" y1="330" x2="224.2" y2="567.5" stroke="gray" stroke-width="1" />
+  <circle cx="224.2" cy="567.5" r="4" fill="gold" />
+  <text x="228.2" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 228.2 325)">Les Useres / 375 m</text>
+  <line x1="285.5" y1="330" x2="285.5" y2="564.0" stroke="gray" stroke-width="1" />
+  <circle cx="285.5" cy="564.0" r="4" fill="gold" />
+  <text x="289.5" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 289.5 325)">Mas d'Avall / 400 m</text>
+  <line x1="341.7" y1="330" x2="341.7" y2="569.6" stroke="gray" stroke-width="1" />
+  <circle cx="341.7" cy="569.6" r="4" fill="gold" />
+  <text x="345.7" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 345.7 325)">Figueroles / 360 m</text>
+  <line x1="385.0" y1="330" x2="385.0" y2="543.6" stroke="gray" stroke-width="1" />
+  <circle cx="385.0" cy="543.6" r="4" fill="gold" />
+  <text x="389.0" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 389.0 325)">Lucena del Cid / 546 m</text>
+  <line x1="456.3" y1="330" x2="456.3" y2="481.7" stroke="gray" stroke-width="1" />
+  <circle cx="456.3" cy="481.7" r="4" fill="green" />
+  <text x="460.3" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 460.3 325)">Puerto El Remolcador / 988 m</text>
+  <line x1="561.6" y1="330" x2="561.6" y2="508.0" stroke="gray" stroke-width="1" />
+  <circle cx="561.6" cy="508.0" r="4" fill="green" />
+  <text x="565.6" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 565.6 325)">Alto de Zucaina / 800 m</text>
+  <line x1="681.3" y1="330" x2="681.3" y2="554.8" stroke="gray" stroke-width="1" />
+  <circle cx="681.3" cy="554.8" r="4" fill="gold" />
+  <text x="685.3" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 685.3 325)">Montanejos / 466 m</text>
+  <line x1="756.3" y1="330" x2="756.3" y2="531.9" stroke="gray" stroke-width="1" />
+  <circle cx="756.3" cy="531.9" r="4" fill="gold" />
+  <text x="760.3" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 760.3 325)">Puebla de Arenoso / 629 m</text>
+  <line x1="836.3" y1="330" x2="836.3" y2="480.0" stroke="gray" stroke-width="1" />
+  <circle cx="836.3" cy="480.0" r="4" fill="green" />
+  <text x="840.3" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 840.3 325)">Puerto Fuente de Rubielos / 1000 m</text>
+  <line x1="872.3" y1="330" x2="872.3" y2="488.7" stroke="gray" stroke-width="1" />
+  <circle cx="872.3" cy="488.7" r="4" fill="gold" />
+  <text x="876.3" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 876.3 325)">Rubielos de Mora / 938 m</text>
+  <line x1="968.9" y1="330" x2="968.9" y2="476.5" stroke="gray" stroke-width="1" />
+  <circle cx="968.9" cy="476.5" r="4" fill="blue" />
+  <text x="972.9" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 972.9 325)">Sprint de Mora de Rubielos / 1025 m</text>
+  <line x1="1062.7" y1="330" x2="1062.7" y2="401.9" stroke="gray" stroke-width="1" />
+  <circle cx="1062.7" cy="401.9" r="4" fill="green" />
+  <text x="1066.7" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 1066.7 325)">Puerto de San Rafael / 1558 m</text>
+  <line x1="1160.0" y1="330" x2="1160.0" y2="345.2" stroke="gray" stroke-width="1" />
+  <circle cx="1160.0" cy="345.2" r="4" fill="green" />
+  <text x="1164.0" y="325" font-family="Verdana" font-size="11" style="fill:black" transform="rotate(-90 1164.0 325)">Alto de Valdelinares (Aramón Valdelinares) / 1963 m</text>
+  <text x="600" y="685" font-family="Verdana" font-size="14" style="font-weight:bold; text-anchor:middle; fill:black">Desnivel positivo: 3685 m</text>
+</svg>
