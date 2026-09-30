@@ -5,7 +5,7 @@ Genera el archivo altimetria.svg (perfil altimétrico de la etapa) a partir de
 etapaEsquema.xml usando expresiones XPath.
 
 @version 1.1
-@author: (tu nombre)
+@author: Adrián Pérez Menéndez (UO301188)
 """
 
 import math
