@@ -4,11 +4,12 @@
 Genera el archivo altimetria.svg (perfil altimétrico de la etapa) a partir de
 etapaEsquema.xml usando expresiones XPath.
 
-@version 1.0
-@author: Adrián Pérez Menéndez
+@version 1.1
+@author: (tu nombre)
 """
 
 import math
+import os
 import xml.etree.ElementTree as ET
 
 
@@ -93,7 +94,8 @@ class Svg(object):
 
         print("Atributos = ", self.raiz.attrib)
 
-        for hijo in self.raiz.findall('.//*'):
+        # Recorrido de los elementos del árbol
+        for hijo in self.raiz.findall('.//'):  # Expresión XPath
             print("\nElemento = ", hijo.tag)
             if hijo.text != None:
                 print("Contenido = ", hijo.text.strip('\n'))
@@ -107,7 +109,9 @@ class Xml2Altimetria(object):
     Lee etapaEsquema.xml, extrae distancias y altitudes con expresiones XPath
     y genera el perfil altimétrico altimetria.svg mediante la clase Svg
     """
-    NS = {'u': 'http://www.uniovi.es'}
+    # Los elementos de etapaEsquema.xml llevan el prefijo del espacio de nombres
+    # con el formato {http://www.uniovi.es}elemento
+    NS = '{http://www.uniovi.es}'
 
     ANCHO = 1200
     ALTO = 700
@@ -122,6 +126,7 @@ class Xml2Altimetria(object):
                'sprint': 'blue', 'anonimo': 'gold'}
 
     def __init__(self, archivoXML, archivoSVG):
+        self.carpeta = os.path.dirname(os.path.abspath(__file__))
         self.archivoXML = archivoXML
         self.archivoSVG = archivoSVG
         self.raiz = None
@@ -143,6 +148,32 @@ class Xml2Altimetria(object):
 
         self.raiz = arbol.getroot()
 
+    def ruta(self, *nombres):
+        """
+        Construye una expresión XPath con el prefijo {http://www.uniovi.es}
+        en cada nombre de elemento (el comodín * no lleva prefijo)
+        Ejemplo: ruta('hitos', 'puerto') -> {http://www.uniovi.es}hitos/{http://www.uniovi.es}puerto
+        """
+        return '/'.join(n if n == '*' else self.NS + n for n in nombres)
+
+    def buscarNodos(self, nodo, *nombres):
+        """
+        Devuelve la lista de nodos que cumplen la expresión XPath (findall)
+        """
+        return nodo.findall(self.ruta(*nombres))
+
+    def buscarNodo(self, nodo, *nombres):
+        """
+        Devuelve el primer nodo que cumple la expresión XPath (findall)
+        """
+        return nodo.findall(self.ruta(*nombres))[0]
+
+    def buscarTexto(self, nodo, *nombres):
+        """
+        Devuelve el contenido del primer nodo que cumple la expresión XPath
+        """
+        return self.buscarNodo(nodo, *nombres).text.strip()
+
     def crearPunto(self, nombre, distancia, altitud, tipo):
         """
         Crea un diccionario con los datos de un punto del perfil
@@ -157,32 +188,32 @@ class Xml2Altimetria(object):
         if tipo == 'anonimo':
             nombre = nodo.get('nombre')
         else:
-            nombre = nodo.find('u:nombre', self.NS).text.strip()
-        distancia = float(nodo.find('u:distanciaSalida', self.NS).text.strip())
-        altitud = float(nodo.find('u:coordenadas/u:altitud', self.NS).text.strip())
+            nombre = self.buscarTexto(nodo, 'nombre')
+        distancia = float(self.buscarTexto(nodo, 'distanciaSalida'))
+        altitud = float(self.buscarTexto(nodo, 'coordenadas', 'altitud'))
         return self.crearPunto(nombre, distancia, altitud, tipo)
 
     def extraerDatos(self):
         """
         Extrae del árbol DOM, mediante expresiones XPath, los datos de la etapa
         """
-        self.nombreEtapa = self.raiz.find('u:nombre', self.NS).text.strip()
-        self.desnivel = self.raiz.find('u:desnivel', self.NS).text.strip()
-        self.longitud = float(self.raiz.find('u:longitud', self.NS).text.strip())
-        origen = self.raiz.find('u:origen', self.NS).text.strip()
-        destino = self.raiz.find('u:destino', self.NS).text.strip()
+        self.nombreEtapa = self.buscarTexto(self.raiz, 'nombre')
+        self.desnivel = self.buscarTexto(self.raiz, 'desnivel')
+        self.longitud = float(self.buscarTexto(self.raiz, 'longitud'))
+        origen = self.buscarTexto(self.raiz, 'origen')
+        destino = self.buscarTexto(self.raiz, 'destino')
 
-        altSalida = float(self.raiz.find('u:ubicaciones/u:salida/u:coordenadas/u:altitud', self.NS).text.strip())
-        altMeta = float(self.raiz.find('u:ubicaciones/u:meta/u:coordenadas/u:altitud', self.NS).text.strip())
+        altSalida = float(self.buscarTexto(self.raiz, 'ubicaciones', 'salida', 'coordenadas', 'altitud'))
+        altMeta = float(self.buscarTexto(self.raiz, 'ubicaciones', 'meta', 'coordenadas', 'altitud'))
 
         self.puntos.append(self.crearPunto(origen, 0.0, altSalida, 'salida'))
         self.puntos.append(self.crearPunto(destino, self.longitud, altMeta, 'meta'))
 
-        for puerto in self.raiz.findall('u:hitos/u:puerto', self.NS):
+        for puerto in self.buscarNodos(self.raiz, 'hitos', 'puerto'):
             self.puntos.append(self.leerNodo(puerto, 'puerto'))
-        for sprint in self.raiz.findall('u:hitos/u:sprint', self.NS):
+        for sprint in self.buscarNodos(self.raiz, 'hitos', 'sprint'):
             self.puntos.append(self.leerNodo(sprint, 'sprint'))
-        for punto in self.raiz.findall('u:puntosAnonimos/u:punto', self.NS):
+        for punto in self.buscarNodos(self.raiz, 'puntosAnonimos', 'punto'):
             self.puntos.append(self.leerNodo(punto, 'anonimo'))
 
         self.puntos.sort(key=lambda p: p['dist'])
@@ -291,6 +322,8 @@ class Xml2Altimetria(object):
         nombreXML = input('Introduzca el archivo XML [etapaEsquema.xml] = ')
         if nombreXML.strip() != '':
             self.archivoXML = nombreXML.strip()
+        self.archivoXML = os.path.join(self.carpeta, self.archivoXML)
+        self.archivoSVG = os.path.join(self.carpeta, self.archivoSVG)
 
         self.leerXML()
         self.extraerDatos()

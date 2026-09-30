@@ -4,10 +4,11 @@
 Genera el archivo etapa.kml (planimetría de la etapa) a partir de etapaEsquema.xml
 usando expresiones XPath.
 
-@version 1.0
-@author: Adrián Pérez Menéndez
+@version 1.1
+@author: (tu nombre)
 """
 
+import os
 import xml.etree.ElementTree as ET
 
 
@@ -84,7 +85,8 @@ class Kml(object):
 
         print("Atributos = ", self.raiz.attrib)
 
-        for hijo in self.raiz.findall('.//*'):
+        # Recorrido de los elementos del árbol
+        for hijo in self.raiz.findall('.//'):  # Expresión XPath
             print("\nElemento = ", hijo.tag)
             if hijo.text != None:
                 print("Contenido = ", hijo.text.strip('\n'))
@@ -98,9 +100,12 @@ class Xml2Kml(object):
     Lee etapaEsquema.xml, extrae los datos con expresiones XPath
     y genera el archivo etapa.kml mediante la clase Kml
     """
-    NS = {'u': 'http://www.uniovi.es'}
+    # Los elementos de etapaEsquema.xml llevan el prefijo del espacio de nombres
+    # con el formato {http://www.uniovi.es}elemento
+    NS = '{http://www.uniovi.es}'
 
     def __init__(self, archivoXML, archivoKML):
+        self.carpeta = os.path.dirname(os.path.abspath(__file__))
         self.archivoXML = archivoXML
         self.archivoKML = archivoKML
         self.raiz = None
@@ -121,20 +126,46 @@ class Xml2Kml(object):
 
         self.raiz = arbol.getroot()
 
+    def ruta(self, *nombres):
+        """
+        Construye una expresión XPath con el prefijo {http://www.uniovi.es}
+        en cada nombre de elemento (el comodín * no lleva prefijo)
+        Ejemplo: ruta('hitos', 'puerto') -> {http://www.uniovi.es}hitos/{http://www.uniovi.es}puerto
+        """
+        return '/'.join(n if n == '*' else self.NS + n for n in nombres)
+
+    def buscarNodos(self, nodo, *nombres):
+        """
+        Devuelve la lista de nodos que cumplen la expresión XPath (findall)
+        """
+        return nodo.findall(self.ruta(*nombres))
+
+    def buscarNodo(self, nodo, *nombres):
+        """
+        Devuelve el primer nodo que cumple la expresión XPath (findall)
+        """
+        return nodo.findall(self.ruta(*nombres))[0]
+
+    def buscarTexto(self, nodo, *nombres):
+        """
+        Devuelve el contenido del primer nodo que cumple la expresión XPath
+        """
+        return self.buscarNodo(nodo, *nombres).text.strip()
+
     def extraerCoordenadas(self, nodo):
         """
         Devuelve (longitud, latitud, altitud) de un nodo que contiene <coordenadas>
         """
-        lon = nodo.find('u:coordenadas/u:longitudGeo', self.NS).text.strip()
-        lat = nodo.find('u:coordenadas/u:latitudGeo', self.NS).text.strip()
-        alt = nodo.find('u:coordenadas/u:altitud', self.NS).text.strip()
+        lon = self.buscarTexto(nodo, 'coordenadas', 'longitudGeo')
+        lat = self.buscarTexto(nodo, 'coordenadas', 'latitudGeo')
+        alt = self.buscarTexto(nodo, 'coordenadas', 'altitud')
         return lon, lat, alt
 
     def extraerDistancia(self, nodo):
         """
         Devuelve la distancia desde la salida (float) de un nodo
         """
-        return float(nodo.find('u:distanciaSalida', self.NS).text.strip())
+        return float(self.buscarTexto(nodo, 'distanciaSalida'))
 
     def crearEstilos(self):
         """
@@ -150,14 +181,14 @@ class Xml2Kml(object):
         """
         Añade los placemarks rojos de salida y meta
         """
-        salida = self.raiz.find('u:ubicaciones/u:salida', self.NS)
-        origen = self.raiz.find('u:origen', self.NS).text.strip()
+        salida = self.buscarNodo(self.raiz, 'ubicaciones', 'salida')
+        origen = self.buscarTexto(self.raiz, 'origen')
         lon, lat, alt = self.extraerCoordenadas(salida)
         self.kml.addPlacemark('Salida: ' + origen, 'Punto de salida de la etapa',
                               lon, lat, alt, 'clampToGround', 'estiloRojo')
 
-        meta = self.raiz.find('u:ubicaciones/u:meta', self.NS)
-        destino = self.raiz.find('u:destino', self.NS).text.strip()
+        meta = self.buscarNodo(self.raiz, 'ubicaciones', 'meta')
+        destino = self.buscarTexto(self.raiz, 'destino')
         lon, lat, alt = self.extraerCoordenadas(meta)
         self.kml.addPlacemark('Meta: ' + destino, 'Punto de meta de la etapa',
                               lon, lat, alt, 'clampToGround', 'estiloRojo')
@@ -166,16 +197,16 @@ class Xml2Kml(object):
         """
         Añade los puertos (verde) y los sprints (azul)
         """
-        for puerto in self.raiz.findall('u:hitos/u:puerto', self.NS):
-            nombre = puerto.find('u:nombre', self.NS).text.strip()
+        for puerto in self.buscarNodos(self.raiz, 'hitos', 'puerto'):
+            nombre = self.buscarTexto(puerto, 'nombre')
             lon, lat, alt = self.extraerCoordenadas(puerto)
             descripcion = 'Puerto de categoría {} - km {}'.format(
                 puerto.get('categoria'), self.extraerDistancia(puerto))
             self.kml.addPlacemark(nombre, descripcion, lon, lat, alt,
                                   'clampToGround', 'estiloVerde')
 
-        for sprint in self.raiz.findall('u:hitos/u:sprint', self.NS):
-            nombre = sprint.find('u:nombre', self.NS).text.strip()
+        for sprint in self.buscarNodos(self.raiz, 'hitos', 'sprint'):
+            nombre = self.buscarTexto(sprint, 'nombre')
             lon, lat, alt = self.extraerCoordenadas(sprint)
             descripcion = 'Sprint {} - km {}'.format(
                 sprint.get('tipo'), self.extraerDistancia(sprint))
@@ -186,7 +217,7 @@ class Xml2Kml(object):
         """
         Añade los puntos anónimos (amarillo)
         """
-        for punto in self.raiz.findall('u:puntosAnonimos/u:punto', self.NS):
+        for punto in self.buscarNodos(self.raiz, 'puntosAnonimos', 'punto'):
             distancia = self.extraerDistancia(punto)
             nombre = punto.get('nombre')
             if nombre is None:
@@ -201,20 +232,20 @@ class Xml2Kml(object):
         anónimos ordenados por distancia, y meta al final
         """
         lista = []
-        for nodo in self.raiz.findall('u:hitos/*', self.NS):
+        for nodo in self.buscarNodos(self.raiz, 'hitos', '*'):
             lon, lat, alt = self.extraerCoordenadas(nodo)
             lista.append((self.extraerDistancia(nodo), '{},{},{}'.format(lon, lat, alt)))
-        for nodo in self.raiz.findall('u:puntosAnonimos/u:punto', self.NS):
+        for nodo in self.buscarNodos(self.raiz, 'puntosAnonimos', 'punto'):
             lon, lat, alt = self.extraerCoordenadas(nodo)
             lista.append((self.extraerDistancia(nodo), '{},{},{}'.format(lon, lat, alt)))
         lista.sort(key=lambda elemento: elemento[0])
 
-        salida = self.raiz.find('u:ubicaciones/u:salida', self.NS)
+        salida = self.buscarNodo(self.raiz, 'ubicaciones', 'salida')
         lon, lat, alt = self.extraerCoordenadas(salida)
         coordenadas = ['{},{},{}'.format(lon, lat, alt)]
         coordenadas += [c for (d, c) in lista]
 
-        meta = self.raiz.find('u:ubicaciones/u:meta', self.NS)
+        meta = self.buscarNodo(self.raiz, 'ubicaciones', 'meta')
         lon, lat, alt = self.extraerCoordenadas(meta)
         coordenadas.append('{},{},{}'.format(lon, lat, alt))
 
@@ -224,7 +255,7 @@ class Xml2Kml(object):
         """
         Añade la línea con el recorrido de la etapa
         """
-        nombre = self.raiz.find('u:nombre', self.NS).text.strip()
+        nombre = self.buscarTexto(self.raiz, 'nombre')
         self.kml.addLineString('Ruta ' + nombre, '0', '1',
                                self.obtenerCoordenadasRuta(),
                                'clampToGround', 'ff0000ff', '4')
@@ -236,6 +267,8 @@ class Xml2Kml(object):
         nombreXML = input('Introduzca el archivo XML [etapaEsquema.xml] = ')
         if nombreXML.strip() != '':
             self.archivoXML = nombreXML.strip()
+        self.archivoXML = os.path.join(self.carpeta, self.archivoXML)
+        self.archivoKML = os.path.join(self.carpeta, self.archivoKML)
 
         self.leerXML()
         self.crearEstilos()
