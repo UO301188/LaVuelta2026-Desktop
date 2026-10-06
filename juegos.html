@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+
+<html lang="es">
+<head>
+    <!-- Datos que describen el documento -->
+    <meta charset="UTF-8" />
+    <title>LaVuelta2026: Juegos</title>
+
+    <meta name="author" content="Adrián Pérez" />
+    <meta name="description" content="Documento juegos.html del proyecto LaVuelta2026" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Enlace a las hojas de estilo-->
+    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
+    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+</head>
+
+<body>
+    <header>
+        <h1>LaVuelta2026</h1>
+        <nav>
+            <a href="index.html" title="Página de inicio de LaVuelta2026">Inicio</a>
+            <a href="ciclista.html" title="Información sobre el ciclista Lorenzo Rota">Ciclista</a>
+            <a href="equipo.html" title="Información sobre el equipo Lotto Intermarché">Equipo</a>
+            <a href="etapa.html" title="Información sobre la etapa 7 de La Vuelta 2026">Etapa</a>
+            <a href="meteorologia.html" title="Información meteorológica de la etapa">Meteorología</a>
+            <a href="clasificaciones.html" title="Clasificaciones de La Vuelta 2026">Clasificaciones</a>
+            <a href="juegos.html" title="Juego de preguntas sobre la etapa">Juegos</a>
+            <a href="ayuda.html" title="Ayuda sobre el uso del sitio web">Ayuda</a>
+        </nav>
+    </header>
+
+    <h2>Juegos</h2>
+
+    <h3>¿Conoces la etapa?</h3>
+    <p>Este juego consta de 10 preguntas sobre la información de la etapa que has estudiado en las sesiones de Tecnologías XML. Puedes consultar los datos en el documento etapa.xml y en las páginas oficiales de La Vuelta.</p>
+
+    <form>
+        <fieldset>
+            <legend>Etapa 7: Vall d'Alba a Aramón Valdelinares</legend>
+
+            <p>
+                <label for="numeroEtapa">1. ¿Cuál es el número de la etapa?</label>
+                <input type="number" id="numeroEtapa" min="1" max="21" />
+            </p>
+
+            <p>
+                <label for="fechaEtapa">2. ¿Qué día se celebra la etapa?</label>
+                <input type="date" id="fechaEtapa" min="2026-08-22" max="2026-09-13" />
+            </p>
+
+            <p>
+                <label for="lugarSalida">3. ¿Cuál es el lugar de salida de la etapa?</label>
+                <select id="lugarSalida" required>
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="vall-d-alba">Vall d'Alba</option>
+                    <option value="vilafames">Vilafamés</option>
+                    <option value="costur">Costur</option>
+                    <option value="les-useres">Les Useres</option>
+                    
+                </select>
+            </p>
+
+            <p>
+                <label for="lugarLlegada">4. ¿Cuál es el lugar de llegada de la etapa?</label>
+                <select id="lugarLlegada" required>
+                    <option value="" selected disabled>Seleccione una opción</option>
+                    <option value="aramon-valdelinares">Aramón Valdelinares</option>
+                    <option value="san-rafael">San Rafael</option>
+                    <option value="mora-de-rubielos">Mora de Rubielos</option>
+                    <option value="montanejos">Montanejos</option>
+                    
+                </select>
+            </p>
+
+            <p>5. ¿Cuál es el tipo de etapa?</p>
+            <p>
+                <input type="radio" id="tipoLlana" name="tipoEtapa" />
+                <label for="tipoLlana">Llana</label>
+                <input type="radio" id="tipoMediaMontana" name="tipoEtapa" />
+                <label for="tipoMediaMontana">Media montaña</label>
+                <input type="radio" id="tipoMontana" name="tipoEtapa" />
+                <label for="tipoMontana">Montaña</label>
+                <input type="radio" id="tipoCrIndividual" name="tipoEtapa" />
+                <label for="tipoCrIndividual">Contrarreloj individual</label>
+                <input type="radio" id="tipoCrEquipos" name="tipoEtapa" />
+                <label for="tipoCrEquipos">Contrarreloj por equipos</label>
+            </p>
+
+            <p>6. ¿Qué hitos hay en la etapa?</p>
+            <p>
+                <input type="checkbox" id="hitoPuerto" />
+                <label for="hitoPuerto">Puerto de montaña</label>
+                <input type="checkbox" id="hitoEspecial" />
+                <label for="hitoEspecial">Puerto categoría especial</label>
+                <input type="checkbox" id="hitoIntermedio" />
+                <label for="hitoIntermedio">Sprint intermedio</label>
+                <input type="checkbox" id="hitoBonificado" />
+                <label for="hitoBonificado">Sprint bonificado</label>
+                <input type="checkbox" id="hitoNinguno" />
+                <label for="hitoNinguno">Sin hitos</label>
+            </p>
+
+            <p>
+                <label for="dureza">7. ¿Qué dureza crees que tiene la etapa (de 1 a 10)?</label>
+                <input type="range" id="dureza" min="1" max="10" step="1" value="5" />
+            </p>
+
+            <p>
+                <label for="longitud">8. ¿Cuál es la longitud de la etapa en kilómetros?</label>
+                <input type="number" id="longitud" min="0" step="0.1" />
+            </p>
+
+            <p>
+                <label for="desnivel">9. ¿Cuál es el desnivel acumulado de la etapa en metros?</label>
+                <input type="number" id="desnivel" min="0" step="1" />
+            </p>
+
+            <p>
+                <label for="descripcion">10. Describe brevemente la etapa:</label>
+                <textarea id="descripcion" rows="4" cols="50"></textarea>
+            </p>
+
+            <p>
+                <label for="nombreParticipante">Nombre del participante:</label>
+                <input type="text" id="nombreParticipante" />
+            </p>
+
+            <button type="submit">Enviar respuestas</button>
+        </fieldset>
+    </form>
+</body>
+</html>
