@@ -14,6 +14,9 @@
     <!--Enlace a las hojas de estilo-->
     <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
+
+    <!--Icono del proyecto-->
+    <link rel="icon" type="image/x-icon" href="multimedia/favicon.ico" />
 </head>
 
 <body>
@@ -31,65 +34,96 @@
         </nav>
     </header>
 
-    <h2>Lorenzo Rota</h2>
+    <main>
+        <h2>Lorenzo Rota</h2>
 
-    <section>
-        <h3>Datos personales</h3>
-        <ul>
-            <li>Nombre completo: Lorenzo Rota</li>
-            <li>Fecha de nacimiento: 23 de mayo de 1995</li> 
-            <li>País de nacimiento: Italia</li>
-            <li>Equipo: Lotto Intermarché</li>
-            <li>Dorsal: 205</li>
-        </ul>
-        <img src="multimedia/lorenzo-rota.png" width="300" height="455" alt="Fotografía de Lorenzo Rota, ciclista del equipo Lotto Intermarché, de brazos cruzados con el maillot del equipo" />
-    </section>
+        <section>
+            <h3>Datos personales</h3>
+            <ul>
+                <li>Nombre completo: Lorenzo Rota</li>
+                <li>Fecha de nacimiento: 23 de mayo de 1995</li>
+                <li>País de nacimiento: Italia</li>
+                <li>Equipo: Lotto Intermarché</li>
+                <li>Dorsal: 205</li>
+            </ul>
+            <picture>
+                <source srcset="multimedia/lorenzo-rota-movil.png" media="(max-width: 768px)" width="150" height="228" />
+                <source srcset="multimedia/lorenzo-rota-tablet.png" media="(max-width: 1024px)" width="225" height="341" />
+                <img src="multimedia/lorenzo-rota.png" width="300" height="455" alt="Fotografía de Lorenzo Rota, ciclista del equipo Lotto Intermarché, de brazos cruzados con el maillot del equipo" />
+            </picture>
+        </section>
 
-    <section>
-        <h3>Datos equipos</h3>
-        <ol>
-            <li>Lotto Intermarché</li>
-            <li>Intermarché - Wanty</li>
-            <li>Vini Zabù - KTM</li>
-            <li>Bardiani - CSF</li>
-            <li>Unieuro Wilier Trevigiani</li>
-            <li>MG Kvis - Wilier</li>
-        </ol>
-    </section>
+        <section>
+            <h3>Datos equipos</h3>
+            <ol>
+                <li>Lotto Intermarché</li>
+                <li>Intermarché - Wanty</li>
+                <li>Vini Zabù - KTM</li>
+                <li>Bardiani - CSF</li>
+                <li>Unieuro Wilier Trevigiani</li>
+                <li>MG Kvis - Wilier</li>
+            </ol>
+        </section>
 
-    <section>
-        <h3>Temporada 2025</h3>
-        
-        <table>
-            <tr>
-                <th>Nombre del dato</th>
-                <th>Resultado</th>
-            </tr>
-            <tr>
-                <td>Competiciones disputadas</td>
-                <td>10</td>
-            </tr>
-            <tr>
-                <td>Victorias de etapa</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Victorias de clasificación general</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Podios conseguidos</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Maillots especiales</td>
-                <td>0</td>
-            </tr>
-            <tr>
-                <td>Mejor resultado de la temporada</td>
-                <td>10º en el Figueira Champions Classic</td>
-            </tr>
-        </table>
-    </section>
+        <section>
+            <h3>Temporada 2025</h3>
+
+            <table>
+                <tr>
+                    <th>Nombre del dato</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr>
+                    <td>Competiciones disputadas</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Victorias de etapa</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Victorias de clasificación general</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Podios conseguidos</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Maillots especiales</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Mejor resultado de la temporada</td>
+                    <td>10º en el Figueira Champions Classic</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h3>Multimedia</h3>
+
+            <p>Equipo <a href="https://www.lavuelta.es/es/equipo/LOI/lotto-intermarche" title="Página del equipo Lotto Intermarché en lavuelta.es">Lotto Intermarché</a> en la Vuelta Ciclista a España 2026.</p>
+
+            <video controls width="480" height="270" poster="multimedia/poster-equipo-lotto.png">
+                <source src="multimedia/equipo-lotto.mp4" type="video/mp4" />
+                <source src="multimedia/equipo-lotto.webm" type="video/webm" />
+                Tu navegador no soporta el elemento video.
+            </video>
+
+            <audio controls>
+                <source src="multimedia/historia-equipo.mp3" type="audio/mpeg" />
+                <source src="multimedia/historia-equipo.wav" type="audio/wav" />
+                Tu navegador no soporta el elemento audio.
+            </audio>
+        </section>
+    </main>
+
+    <footer>
+        <p>Adrián Pérez Menéndez</p>
+        <address>
+            <a href="mailto:uo301188@uniovi.es" title="Enviar un correo a Adrián Pérez Menéndez">uo301188@uniovi.es</a>
+        </address>
+    </footer>
 </body>
 </html>

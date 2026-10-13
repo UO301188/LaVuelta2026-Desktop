@@ -9,5 +9,65 @@
 /*  Grupo de laboratorio: PL2                       */
 /* *************************************************/
 
+/* Gama cromática
 
+   Color principal: #8B0000 (rojo oscuro)
+   - Contraste de 8.75:1 con color secundario (AAA)
+   - Contraste de 10.01:1 con color blanco (AAA)
+
+   Color secundario: #FDECEA (rosa muy claro)
+   - Contraste de 8.75:1 con color principal (AAA)
+   - Contraste de 18.36:1 con color negro (AAA)
+
+   Color blanco: #FFFFFF
+   - Contraste de 10.01:1 con color principal (AAA)
+
+   Color negro: #000000
+   - Contraste de 18.36:1 con color secundario (AAA)
+*/
+
+/* Especificidad: 010 */
+:root {
+    --color-principal: #8B0000;
+    --color-secundario: #FDECEA;
+    --color-negro: #000000;
+    --color-blanco: #FFFFFF;
+}
+
+/* Especificidad: 001 */
+body {
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+/* Especificidad: 001 */
+header {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+/* Especificidad: 001 */
+footer {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+/* Especificidad: 002 */
+header a {
+   
+    color: var(--color-blanco);
+}
+
+/* Especificidad: 002 */
+footer a {
+   
+    color: var(--color-blanco);
+}
+
+/* Especificidad: 001 */
+h2, h3, h4, h5, h6 {
+    
+    color: var(--color-principal);
+}
 
