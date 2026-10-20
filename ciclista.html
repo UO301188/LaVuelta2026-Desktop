@@ -21,10 +21,10 @@
 
 <body>
     <header>
-        <h1>LaVuelta2026</h1>
+        <h1><a href="index.html" title="Ir a la página de inicio de LaVuelta2026">LaVuelta2026</a></h1>
         <nav>
             <a href="index.html" title="Página de inicio de LaVuelta2026">Inicio</a>
-            <a href="ciclista.html" title="Información sobre el ciclista Lorenzo Rota">Ciclista</a>
+            <a href="ciclista.html" aria-current="page" title="Información sobre el ciclista Lorenzo Rota">Ciclista</a>
             <a href="equipo.html" title="Información sobre el equipo Lotto Intermarché">Equipo</a>
             <a href="etapa.html" title="Información sobre la etapa 7 de La Vuelta 2026">Etapa</a>
             <a href="meteorologia.html" title="Información meteorológica de la etapa">Meteorología</a>
@@ -34,16 +34,24 @@
         </nav>
     </header>
 
+    <nav aria-label="migas">
+        <ol>
+            <li><a href="index.html" title="Ir a la página de inicio de LaVuelta2026">Inicio</a></li>
+            <li aria-hidden="true">>></li>
+            <li>Ciclista</li>
+        </ol>
+    </nav>
+
     <main>
         <h2>Lorenzo Rota</h2>
 
         <section>
             <h3>Datos personales</h3>
             <ul>
-                <li>Nombre completo: Lorenzo Rota</li>
-                <li>Fecha de nacimiento: 23 de mayo de 1995</li>
-                <li>País de nacimiento: Italia</li>
-                <li>Equipo: Lotto Intermarché</li>
+                <li>Lorenzo Rota</li>
+                <li>23/05/1995</li>
+                <li>Italia</li>
+                <li>Lotto Intermarché</li>
                 <li>Dorsal: 205</li>
             </ul>
             <picture>
@@ -69,33 +77,34 @@
             <h3>Temporada 2025</h3>
 
             <table>
+                <caption>Resultados de Lorenzo Rota en la temporada 2025</caption>
                 <tr>
-                    <th>Nombre del dato</th>
-                    <th>Resultado</th>
+                    <th id="colDatos" scope="col">Datos</th>
+                    <th id="colResultados" scope="col">Resultados</th>
                 </tr>
                 <tr>
-                    <td>Competiciones disputadas</td>
-                    <td>10</td>
+                    <th id="filaCompeticiones" scope="row">Competiciones</th>
+                    <td headers="colResultados filaCompeticiones">10</td>
                 </tr>
                 <tr>
-                    <td>Victorias de etapa</td>
-                    <td>0</td>
+                    <th id="filaEtapas" scope="row">Victorias de etapa</th>
+                    <td headers="colResultados filaEtapas">0</td>
                 </tr>
                 <tr>
-                    <td>Victorias de clasificación general</td>
-                    <td>0</td>
+                    <th id="filaGeneral" scope="row">Victorias de general</th>
+                    <td headers="colResultados filaGeneral">0</td>
                 </tr>
                 <tr>
-                    <td>Podios conseguidos</td>
-                    <td>0</td>
+                    <th id="filaPodios" scope="row">Podios</th>
+                    <td headers="colResultados filaPodios">0</td>
                 </tr>
                 <tr>
-                    <td>Maillots especiales</td>
-                    <td>0</td>
+                    <th id="filaMaillots" scope="row">Maillots</th>
+                    <td headers="colResultados filaMaillots">0</td>
                 </tr>
                 <tr>
-                    <td>Mejor resultado de la temporada</td>
-                    <td>10º en el Figueira Champions Classic</td>
+                    <th id="filaPuesto" scope="row">Mejor puesto</th>
+                    <td headers="colResultados filaPuesto">10º</td>
                 </tr>
             </table>
         </section>

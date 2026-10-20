@@ -54,20 +54,78 @@ footer {
 }
 
 /* Especificidad: 002 */
-header a {
-   
-    color: var(--color-blanco);
+header a, footer a {
+    color: var(--color-blanco); /*ADVERTENCIA: color de fondo heredado de header y footer --color-principal */
+    text-decoration: none;
 }
 
-/* Especificidad: 002 */
-footer a {
-   
-    color: var(--color-blanco);
+/* Especificidad: 012 */
+header a[aria-current="page"] {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    font-weight: bold;
+    padding: 0.2em 0.5em;
 }
 
 /* Especificidad: 001 */
 h2, h3, h4, h5, h6 {
-    
-    color: var(--color-principal);
+    color: var(--color-principal); /*ADVERTENCIA: color de fondo heredado de body --color-blanco */
 }
 
+/* Especificidad: 003 */
+header + nav > ol {
+    font-size: 0.8em;
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
+/* Especificidad: 004 */
+header + nav > ol > li {
+    display: inline;
+}
+
+/* Especificidad: 014 */
+header + nav > ol > li:last-child {
+    font-weight: bold;
+}
+
+/* Especificidad: 014 */
+section:has(picture) > ul > li:first-child {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Especificidad: 014 */
+section:has(picture) > ul > li:nth-child(3) {
+    font-size: 1.5em;
+}
+
+/* Especificidad: 014 */
+section:has(picture) > ul > li:nth-child(4) {
+    font-weight: bold;
+}
+
+/* Especificidad: 001 */
+table {
+    border-collapse: collapse;
+}
+
+/* Especificidad: 001 */
+th, td {
+    border: 1px solid var(--color-principal);
+    padding: 0.3em 0.8em;
+}
+
+/* Especificidad: 011 */
+th[scope="col"] {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+/* Especificidad: 011 */
+th[scope="row"] {
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    text-align: left;
+}
