@@ -9,6 +9,12 @@
 /*  Grupo de laboratorio: PL2                       */
 /* *************************************************/
 
+
+/* Especificidad: 000 */
+* {
+    box-sizing: border-box;
+}
+
 /* Especificidad: 001 */
 body {
     margin: 0;
@@ -100,6 +106,14 @@ section:has(article + article) > h3 {
 /* ========================================================= */
 /* Adaptabilidad general                                     */
 /* ========================================================= */
+
+/* Especificidad: 002 */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+
 
 
 @media (max-width: 1024px) {
