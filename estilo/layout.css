@@ -113,9 +113,6 @@ img, video {
     height: auto;
 }
 
-
-
-
 @media (max-width: 1024px) {
     /* Especificidad: 001 */
     header {
@@ -137,10 +134,9 @@ img, video {
 
     /* Especificidad: 003 */
     section:has(article + article) {
-        grid-template-columns: repeat(2, 1fr); /*ADVERTENCIA: Redefinicion de la propiedad grid-template-columns */
+        grid-template-columns: repeat(2, 1fr); /*ADVERTENCIA: redefinición de la propiedad con valor original repeat(4, 1fr) */
     }
 }
-
 
 @media (max-width: 768px) {
     /* Especificidad: 002 */
@@ -151,6 +147,6 @@ img, video {
 
     /* Especificidad: 003 */
     section:has(article + article) {
-        grid-template-columns: 1fr; /*ADVERTENCIA: Redefinicion de la propiedad grid-template-columns */
+        grid-template-columns: 1fr; /*ADVERTENCIA: redefinición de la propiedad con valor original repeat(4, 1fr) */
     }
 }

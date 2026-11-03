@@ -55,7 +55,7 @@ footer {
 
 /* Especificidad: 002 */
 header a, footer a {
-    color: var(--color-blanco); /*ADVERTENCIA: color de fondo heredado de header y footer --color-principal */
+    color: inherit; /*ADVERTENCIA: color de fondo heredado de header y footer --color-principal */
     text-decoration: none;
 }
 
@@ -109,12 +109,9 @@ section:has(picture) > ul > li:nth-child(4) {
 /* Especificidad: 001 */
 table {
     border-collapse: collapse;
-    max-width: 100%;
-    overflow-x: auto;
-    display: block;
 }
 
-/* Especificidad: 001 */
+/* Especificidad: 002 */
 th, td {
     border: 1px solid var(--color-principal);
     padding: 0.3em 0.8em;
@@ -131,9 +128,4 @@ th[scope="row"] {
     background-color: var(--color-secundario);
     color: var(--color-principal);
     text-align: left;
-}
-
-/* Especificidad: 000 */
-* {
-    box-sizing: border-box;
 }
