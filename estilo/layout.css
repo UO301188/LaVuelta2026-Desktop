@@ -50,7 +50,7 @@ search {
     justify-self: end;
     padding: 0.3em 0.5em;
     margin: 0.5em 1em;
-    border: 1px solid var(--color-principal);
+    border: 1px solid var(--color-principal); /*ADVERTENCIA: variable CSS no comprobable estáticamente, --color-principal está definida en :root de estilo.css con valor #8B0000 */
 }
 
 /* Especificidad: 003 */
